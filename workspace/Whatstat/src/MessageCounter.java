@@ -12,6 +12,17 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import javax.swing.JEditorPane;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JSlider;
+import javax.swing.JFormattedTextField;
+import javax.swing.JSpinner;
+import javax.swing.border.TitledBorder;
+import javax.swing.DropMode;
 
 public class MessageCounter extends JFrame {
 
@@ -37,18 +48,19 @@ public class MessageCounter extends JFrame {
 	 * Create the frame.
 	 */
 	public MessageCounter() {
+		setBackground(Color.GREEN);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 418, 501);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(102, 204, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblOutput = new JLabel("message counter output");
-		lblOutput.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		JLabel lblOutput = new JLabel("message counter");
+		lblOutput.setFont(new Font("Narkisim", Font.PLAIN, 21));
 		lblOutput.setBackground(new Color(255, 255, 0));
-		lblOutput.setBounds(129, 44, 261, 60);
+		lblOutput.setBounds(132, 11, 165, 47);
 		contentPane.add(lblOutput);
 		
 		JButton btnNewButton = new JButton("close");
@@ -61,7 +73,26 @@ public class MessageCounter extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnNewButton.setBounds(204, 189, 73, 23);
+		btnNewButton.setBounds(172, 415, 73, 23);
 		contentPane.add(btnNewButton);
+		
+	
+	
+		functionTop top=null;
+		String out = top.run("C:/Users/roei/Downloads/ex.txt",1);
+		
+		JTextArea outi = new JTextArea();
+		outi.setBackground(new Color(102, 255, 102));
+		outi.setFont(new Font("Arial", Font.BOLD, 16));
+		outi.setText(out);
+		JScrollPane scrollPane =new JScrollPane(outi);
+		scrollPane.setBounds(88, 69, 240, 335);
+		contentPane.add(scrollPane);	
+		
+		
+	
+		
+	   
+		
 	}
 }

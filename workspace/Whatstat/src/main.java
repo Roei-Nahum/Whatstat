@@ -96,8 +96,8 @@ public class main {
 		});
 		Image messageCounterImg = new ImageIcon(this.getClass().getResource("/messageCounter.png")).getImage();
 		
-		JLabel lblTheSmartest = new JLabel("the smartest");
-		lblTheSmartest.setBounds(440, 124, 101, 17);
+		JLabel lblTheSmartest = new JLabel("Media Sender");
+		lblTheSmartest.setBounds(452, 124, 101, 17);
 		frame.getContentPane().add(lblTheSmartest);
 		
 		JLabel smartestLabel = new JLabel("");
@@ -109,13 +109,13 @@ public class main {
 		});
 		Image smartestImage = new ImageIcon(this.getClass().getResource("/smartest.png")).getImage();
 		smartestLabel.setIcon(new ImageIcon(smartestImage));
-		smartestLabel.setBounds(450, 148, 64, 64);
+		smartestLabel.setBounds(51, 251, 64, 64);
 		frame.getContentPane().add(smartestLabel);
 		
 		
 		
 		MessageCounterLabel.setIcon(new ImageIcon(messageCounterImg));
-		MessageCounterLabel.setBounds(62, 153, 64, 64);
+		MessageCounterLabel.setBounds(51, 152, 64, 64);
 		frame.getContentPane().add(MessageCounterLabel);
 		btnNewButton.setBounds(219, 332, 138, 32);
 		frame.getContentPane().add(btnNewButton);
@@ -173,7 +173,7 @@ public class main {
 		});
 		Image questionsImg = new ImageIcon(this.getClass().getResource("/questions.png")).getImage();
 		lblQuestions.setIcon(new ImageIcon(questionsImg));
-		lblQuestions.setBounds(62, 251, 64, 64);
+		lblQuestions.setBounds(452, 148, 64, 64);
 		frame.getContentPane().add(lblQuestions);
 		
 		JLabel lblTheAsker = new JLabel("the asker");
@@ -197,7 +197,7 @@ public class main {
 		frame.getContentPane().add(lblInitiator);
 		
 		JLabel lblEmojiUser = new JLabel("emoji user");
-		lblEmojiUser.setBounds(256, 224, 101, 17);
+		lblEmojiUser.setBounds(266, 223, 101, 17);
 		frame.getContentPane().add(lblEmojiUser);
 		
 		JLabel emojilbl = new JLabel("");

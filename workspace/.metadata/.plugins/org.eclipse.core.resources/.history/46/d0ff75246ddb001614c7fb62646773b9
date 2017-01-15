@@ -1,0 +1,79 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JTextField;
+
+public class MessageCounter extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MessageCounter frame = new MessageCounter();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public MessageCounter() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(102, 204, 102));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblOutput = new JLabel("message counter output");
+		lblOutput.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblOutput.setBackground(new Color(255, 255, 0));
+		lblOutput.setBounds(89, 0, 261, 60);
+		contentPane.add(lblOutput);
+		
+		JButton btnNewButton = new JButton("close");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				dispose();
+			}
+		});
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnNewButton.setBounds(182, 228, 73, 23);
+		contentPane.add(btnNewButton);
+		
+	
+		functionTop top=null;
+		String out = top.run("C:/Users/roei/Downloads/ex.txt");
+		JLabel outi = new JLabel("הדס בורגר - 3601\r\nליאור כהן צמח - 2880\r\nמתן אלקוני - 2164\r\n‪+972 50-540-6812‬ - 2019\r\nנתנאל צדוק - 1873\r\nליאור קאוצ'רו - 1569\r\nאודם הראל - 1404\r\nמאור פור - 1308\r\nגיא גיספן - 1250\r\nעידו כץ - 1184\r\nחנה קרסניקר - 1153\r\nרז משה - 1086\r\nדויד לוי - 970\r\nרינת ברוער - 952\r\nRoei Nahum - 823\r\nשרון לנדס - 684\r\n‪+972 54-655-7774‬ - 642\r\n‪+972 53-335-2080‬ - 631\r\nתמר ויצליצקי - 525\r\n‪+972 54-532-3891‬ - 518\r\nאלמוג צדיק אהובי - 477\r\nוסרמן - 437\r\nעומר דיין - 429\r\nדורון דואדי - 421\r\nאייל פרופ - 418\r\nעידו חייבי האח - 401\r\nיואב בראון - 347\r\nאוריאל קול - 341\r\nאמיר הנדסה - 341\r\n‪+972 54-636-8015‬ - 326\r\nדן ירון - 321\r\n‪+972 54-655-0032‬ - 321\r\nאליאור פרלמוטר - 237\r\nמתיס - 196\r\nמור משה כהן - 172\r\nיעל כהן - 134\r\nתומר ורסנו - 131\r\n‪+972 50-739-6931‬ - 130\r\nרועי גליס - 126\r\nאבי קייזרמן - 126\r\nהדר תם - 113\r\nנתי אליהו - 93\r\nיוסי קרל - 75\r\n‪+972 52-554-8884‬ - 72\r\nידידי רועי טנדלר - 57\r\nעומר עיני - 57\r\nאפק ברנהרד - 40\r\nאלעד דוד - 36\r\n‪+972 50-334-3037‬ - 35\r\nירדן בתדודה נחום - 34\r\n‪+972 52-605-9115‬ - 30\r\n‪+972 54-459-9630‬ - 27\r\nמאיה אהובים - 23\r\nגלעד פלן - 18\r\n‪+972 52-863-5392‬ - 12\r\n‪+972 54-768-0923‬ - 10\r\nרז נקאש - 9\r\nניב זנדני - 9\r\n‪+972 54-222-8922‬ - 8\r\nמאור לאופר - 8\r\nדניאל שליו - 8\r\n‪+972 52-694-6292‬ - 7\r\nמיכל וסרמן - 7\r\nלירז - 6\r\nדניאל הנדסה - 5\r\nנתנאל נחום - 5\r\nבבו - 4\r\nאור יצחק - 3\r\n‪+972 54-943-0859‬ - 3\r\n‪+972 52-456-0070‬ - 2\r\nאביעד אייזנברג - 2\r\nאברהם מימרן - 2\r\n‪+972 52-613-3663‬ - 1\r\nלילך דרעי - 1\r\n‪+972 50-943-5066‬ - 1\r\n");
+		outi.setBounds(10, 49, 424, 180);
+		contentPane.add(outi);
+		
+		JLabel label = new JLabel("בלה");
+		label.setBounds(143, 86, 46, 14);
+		contentPane.add(label);
+	}
+}
